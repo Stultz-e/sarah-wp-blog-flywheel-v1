@@ -1,0 +1,192 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(to right, #E7C7C8, #F2E4E3);
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-size: 1.8em;
+    font-family: $bodyText;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: $scriptFont, sans-serif;
+ }
+
+ h1 {
+    font-size: 3.8em;
+    padding-bottom: .5rem;  
+
+     @include respond(atMedium)  {
+        font-size: 4.8em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 6.8em;   
+    }    
+ }
+
+ h2 {
+    font-size: 3.8em;  
+    font-family: $scriptFont, sans-serif;
+    margin: 0;
+    border-bottom: 1px solid $gold;
+    padding-bottom: 15px;
+
+    @include respond(atMedium)  {
+        font-size: 4.8em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 6.8em;   
+    } 
+ }
+
+ h3 {
+    font-size: 2.8em;  
+
+     @include respond(atMedium)  {
+        font-size: 3.2em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 5em; 
+        margin-bottom: 3rem;  
+    } 
+ }
+
+ h4 {
+    font-size: 3.8em;  
+
+     @include respond(atMedium)  {
+        font-size: 4.8em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 6.8em;   
+    } 
+ }
+
+ h5 {
+    font-size: 3.8em;  
+
+     @include respond(atMedium)  {
+        font-size: 4.8em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 6.8em;   
+    } 
+ }
+
+ h6 {
+    font-size: 3.8em;  
+
+     @include respond(atMedium)  {
+        font-size: 4.8em;     
+    }   
+  
+    @include respond(atLarge)  {
+        font-size: 6.8em;   
+    } 
+ }
+
+ .blog-page {
+     margin-top: 4.5rem;
+ }
+
+ .blog-body {
+     max-width: 94rem;
+     padding: 0 1rem;
+     height: auto;
+     background-color: #fff;
+     box-shadow: 0, 0, 0, .5;
+     margin: auto;
+     padding-bottom: 1px;
+
+     &__img {
+         width: 500px;
+         height: auto;
+         margin-top: -2rem;
+
+         img {
+             max-width: 100%;
+             height: auto;
+         }
+     }
+
+     &__text {
+         max-width: 65.6rem;
+         margin: 4rem auto;
+        h2 {
+            font-family: $bodyText, sans-serif;
+            font-weight: 300;
+            font-size: 3em;
+
+            a {
+                text-decoration: none;
+                color: $darkFont;
+                transition: color 200ms ease-out;
+
+                &:hover {
+                    color: $gold;
+                }
+            }
+        }
+     }
+
+     &__tags {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $bodyText, sans-serif;
+        margin-top: .5rem;
+
+        &__author, &__date {
+            font-size: 1.5em;
+            color: $gold;
+            margin: 0;
+            font-style: italic;
+        }
+     }
+ }
+
+ .blog-head {
+     text-align: center;
+     &__main {
+         color: #C1A87D;
+         text-align: center;
+         margin: 0;
+         padding-top: 4rem;
+     }
+     &__sub {
+         color: #C1A87D;
+         text-align: center;
+         font-size: 2em;
+         font-family: $bodyText, sans-serif;
+         font-weight: 300;
+         margin: .5rem 0 0 0; 
+
+         @include respond(atMedium) {
+            font-size: 2.4em;    
+        }  
+
+        @include respond (atLarge) {
+            font-size: 2.7em;   
+        } 
+    }
+}
+
+// INNER BLOG PAGE 
+
+.blog-inner-page {
+    padding-top: 2rem;
+}

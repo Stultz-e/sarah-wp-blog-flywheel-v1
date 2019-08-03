@@ -1,0 +1,23 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == atSmall {
+        @media only screen and (min-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == atMedium {
+        @media only screen and (min-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == atLarge {
+        @media only screen and (min-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == atXl {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
