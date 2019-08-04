@@ -38,7 +38,6 @@ p {
     font-size: 3.8em;  
     font-family: $scriptFont, sans-serif;
     margin: 0;
-    border-bottom: 1px solid $gold;
     padding-bottom: 15px;
 
     @include respond(atMedium)  {
@@ -111,6 +110,24 @@ p {
      box-shadow: 0, 0, 0, .5;
      margin: auto;
      padding-bottom: 1px;
+     min-height: fill;
+
+     &__underline {
+        font-family: $bodyText, sans-serif;
+        font-weight: 300;
+        font-size: 3em;
+        border-bottom: 1px solid $gold;
+
+        a {
+            text-decoration: none;
+            color: $darkFont;
+            transition: color 200ms ease-out;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
 
      &__img {
          width: 500px;
@@ -130,6 +147,7 @@ p {
             font-family: $bodyText, sans-serif;
             font-weight: 300;
             font-size: 3em;
+            
 
             a {
                 text-decoration: none;
@@ -155,6 +173,16 @@ p {
             color: $gold;
             margin: 0;
             font-style: italic;
+        }
+        
+        a {
+            text-decoration: none;
+            color: $darkFont;
+            transition: color 200ms ease-out;
+
+            &:hover {
+                color: $gold;
+            }
         }
      }
  }
