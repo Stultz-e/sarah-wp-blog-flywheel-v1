@@ -102,8 +102,8 @@ p {
      margin-top: 4.5rem;
  }
 
- .blog-body {
-     max-width: 94rem;
+ .blog-body {   
+    position: relative;
      padding: 0 1rem;
      height: auto;
      background-color: #fff;
@@ -111,6 +111,11 @@ p {
      margin: auto;
      padding-bottom: 1px;
      min-height: fill;
+     max-width: 75rem;
+
+    @include respond(atMedium) {
+        max-width: 94rem;
+    }
 
      &__underline {
         font-family: $bodyText, sans-serif;
@@ -144,11 +149,14 @@ p {
          max-width: 65.6rem;
          margin: 4rem auto;
         h2 {
+            font-size: 2rem;
             font-family: $bodyText, sans-serif;
             font-weight: 300;
-            font-size: 3em;
-            
 
+            @include respond (atSmall) {
+                font-size: 3rem;
+            }
+            
             a {
                 text-decoration: none;
                 color: $darkFont;
@@ -189,11 +197,12 @@ p {
 
  .blog-head {
      text-align: center;
+
      &__main {
          color: #C1A87D;
          text-align: center;
          margin: 0;
-         padding-top: 4rem;
+         padding-top: 4rem;     
      }
      &__sub {
          color: #C1A87D;
@@ -201,7 +210,7 @@ p {
          font-size: 2em;
          font-family: $bodyText, sans-serif;
          font-weight: 300;
-         margin: .5rem 0 0 0; 
+         margin: -.6rem 0 0 0; 
 
          @include respond(atMedium) {
             font-size: 2.4em;    
@@ -211,10 +220,37 @@ p {
             font-size: 2.7em;   
         } 
     }
+
+    &__image {
+        position: absolute;
+        display: none;
+        z-index: 0;
+
+        @include respond(atSmall) {
+            top: 0;    
+            display: inherit;    
+            max-width: 20vh;    
+            left: 0; 
+        }  
+
+        @include respond(atMedium) {
+            top: 0rem;
+            left: 0%;
+        }  
+
+        @include respond (atLarge) {
+            max-width: 30vh;
+            left: -15%;
+        } 
+
+    }
 }
 
 // INNER BLOG PAGE 
 
 .blog-inner-page {
-    padding-top: 2rem;
+        padding: 1px;
+    @include respond (atSmall) {
+        padding-top: 2rem;
+    }
 }
